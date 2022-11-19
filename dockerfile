@@ -27,42 +27,41 @@ RUN sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list \
 #RUN sed -i 's/ubuntu-mono-dark/elementary-xfce/g' $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
 
 # Install Utilities
-#COPY ./ubuntu/install/misc $INST_SCRIPTS/misc/
+#COPY ./src/ubuntu/install/misc $INST_SCRIPTS/misc/
 #RUN bash $INST_SCRIPTS/misc/install_tools.sh && rm -rf $INST_SCRIPTS/misc/
 
 # Install Google Chrome
-COPY ./ubuntu/install/chrome $INST_SCRIPTS/chrome/
+COPY ./src/ubuntu/install/chrome $INST_SCRIPTS/chrome/
 RUN bash $INST_SCRIPTS/chrome/install_chrome.sh  && rm -rf $INST_SCRIPTS/chrome/
 
 # Install Firefox
-#COPY ./ubuntu/install/firefox/ $INST_SCRIPTS/firefox/
-#COPY ./ubuntu/install/firefox/firefox.desktop $HOME/Desktop/
+#COPY ./src/ubuntu/install/firefox/ $INST_SCRIPTS/firefox/
+#COPY ./src/ubuntu/install/firefox/firefox.desktop $HOME/Desktop/
 #RUN bash $INST_SCRIPTS/firefox/install_firefox.sh && rm -rf $INST_SCRIPTS/firefox/
 
 # Install Custom Certificate Authority
-# COPY ./ubuntu/install/certificates $INST_SCRIPTS/certificates/
+# COPY ./src/ubuntu/install/certificates $INST_SCRIPTS/certificates/
 # RUN bash $INST_SCRIPTS/certificates/install_ca_cert.sh && rm -rf $INST_SCRIPTS/certificates/
 
 
 # Install vs-code
-COPY ./ubuntu/install/vs_code $INST_SCRIPTS/vs_code/
-RUN bash $INST_SCRIPTS/vs_code/install_vs_code.sh  && rm -rf $INST_SCRIPTS/vs_code/
-COPY ./ubuntu/install/vs_code/custom_startup.sh $STARTUPDIR/custom_startup.sh
-RUN chmod +x $STARTUPDIR/custom_startup.sh
-RUN chmod 755 $STARTUPDIR/custom_startup.sh
+# COPY ./src/ubuntu/install/vs_code $INST_SCRIPTS/vs_code/
+# RUN bash $INST_SCRIPTS/vs_code/install_vs_code.sh  && rm -rf $INST_SCRIPTS/vs_code/
+# COPY ./src/ubuntu/install/vs_code/custom_startup.sh $STARTUPDIR/custom_startup.sh
+# RUN chmod +x $STARTUPDIR/custom_startup.sh
+# RUN chmod 755 $STARTUPDIR/custom_startup.sh
 
 
 # Install nodejs
-RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
-	&& apt-get install -y nodejs
+# RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
+# 	&& apt-get install -y nodejs
 
 # Install finalshell
 RUN bash rm -f finalshell_install_linux.sh ;wget www.hostbuf.com/downloads/finalshell_install_linux.sh;chmod +x finalshell_install_linux.sh;./finalshell_install_linux.sh;chmod +x /usr/lib/FinalShell/bin/FinalShell;
 
-# Install anavicat
-COPY ./ubuntu/install/navicat $INST_SCRIPTS/navicat/
+# Install anavicat 
+COPY ./src/ubuntu/install/navicat $INST_SCRIPTS/navicat/
 RUN bash $INST_SCRIPTS/navicat/install_vs_navicat.sh
 
 
 ######### End Customizations ###########
-USER root
