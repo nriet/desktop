@@ -68,3 +68,5 @@ COPY ./ubuntu/install/navicat $INST_SCRIPTS/navicat/
 RUN bash $INST_SCRIPTS/navicat/install_vs_navicat.sh 
 
 ######### End Customizations ###########
+
+USER root
