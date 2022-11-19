@@ -16,7 +16,7 @@ cd build
 make install
 ldconfig
 mkdir navicat15
-# mount -o loop navicat15-premium-cs.AppImage navicat15
+mount -o loop navicat15-premium-cs.AppImage navicat15
 # cp -r navicat15 navicat15-patched
 # ./navicat-patcher navicat15-patched
 # ./appimagetool-x86_64.AppImage navicat15-patched navicat15-premium-cs-pathed.AppImage
