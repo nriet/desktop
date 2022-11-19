@@ -27,7 +27,7 @@ RUN sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list \
 #RUN sed -i 's/ubuntu-mono-dark/elementary-xfce/g' $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
 
 # Install Utilities
-#COPY ./src/ubuntu/install/misc $INST_SCRIPTS/misc/
+#COPY ./ubuntu/install/misc $INST_SCRIPTS/misc/
 #RUN bash $INST_SCRIPTS/misc/install_tools.sh && rm -rf $INST_SCRIPTS/misc/
 
 # Install Google Chrome
@@ -35,8 +35,8 @@ COPY ./ubuntu/install/chrome $INST_SCRIPTS/chrome/
 RUN bash $INST_SCRIPTS/chrome/install_chrome.sh  && rm -rf $INST_SCRIPTS/chrome/
 
 # Install Firefox
-#COPY ./src/ubuntu/install/firefox/ $INST_SCRIPTS/firefox/
-#COPY ./src/ubuntu/install/firefox/firefox.desktop $HOME/Desktop/
+#COPY ./ubuntu/install/firefox/ $INST_SCRIPTS/firefox/
+#COPY ./ubuntu/install/firefox/firefox.desktop $HOME/Desktop/
 #RUN bash $INST_SCRIPTS/firefox/install_firefox.sh && rm -rf $INST_SCRIPTS/firefox/
 
 # Install Custom Certificate Authority
@@ -47,7 +47,7 @@ RUN bash $INST_SCRIPTS/chrome/install_chrome.sh  && rm -rf $INST_SCRIPTS/chrome/
 # Install vs-code
 COPY ./ubuntu/install/vs_code $INST_SCRIPTS/vs_code/
 RUN bash $INST_SCRIPTS/vs_code/install_vs_code.sh  && rm -rf $INST_SCRIPTS/vs_code/
-COPY ./src/ubuntu/install/vs_code/custom_startup.sh $STARTUPDIR/custom_startup.sh
+COPY ./ubuntu/install/vs_code/custom_startup.sh $STARTUPDIR/custom_startup.sh
 RUN chmod +x $STARTUPDIR/custom_startup.sh
 RUN chmod 755 $STARTUPDIR/custom_startup.sh
 
