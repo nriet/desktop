@@ -57,11 +57,7 @@ RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
 	&& apt-get install -y nodejs
 
 # Install finalshell
-RUN bash rm -f finalshell_install_linux.sh ;\
-	&& wget www.hostbuf.com/downloads/finalshell_install_linux.sh; \
-	&& chmod +x finalshell_install_linux.sh; \
-	&& ./finalshell_install_linux.sh; \
-	&& chmod +x /usr/lib/FinalShell/bin/FinalShell;
+RUN bash rm -f finalshell_install_linux.sh ;wget www.hostbuf.com/downloads/finalshell_install_linux.sh;chmod +x finalshell_install_linux.sh;./finalshell_install_linux.sh;chmod +x /usr/lib/FinalShell/bin/FinalShell;
 
 # Install anavicat
 COPY ./ubuntu/install/navicat $INST_SCRIPTS/navicat/
