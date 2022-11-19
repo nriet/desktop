@@ -65,7 +65,6 @@ RUN bash rm -f finalshell_install_linux.sh ;\
 
 # Install anavicat
 COPY ./ubuntu/install/navicat $INST_SCRIPTS/navicat/
-RUN bash $INST_SCRIPTS/navicat/install_vs_navicat.sh  && rm -rf $INST_SCRIPTS/navicat/
-RUN cd $INST_SCRIPTS/navicat
+RUN bash $INST_SCRIPTS/navicat/install_vs_navicat.sh 
 
 ######### End Customizations ###########
