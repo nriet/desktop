@@ -31,8 +31,8 @@ RUN sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list \
 #RUN bash $INST_SCRIPTS/misc/install_tools.sh && rm -rf $INST_SCRIPTS/misc/
 
 # Install Google Chrome
-COPY ./ubuntu/install/chrome $INST_SCRIPTS/chrome/
-RUN bash $INST_SCRIPTS/chrome/install_chrome.sh  && rm -rf $INST_SCRIPTS/chrome/
+# COPY ./ubuntu/install/chrome $INST_SCRIPTS/chrome/
+# RUN bash $INST_SCRIPTS/chrome/install_chrome.sh  && rm -rf $INST_SCRIPTS/chrome/
 
 # Install Firefox
 #COPY ./ubuntu/install/firefox/ $INST_SCRIPTS/firefox/

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -ex
-#apt-get update
+apt-get update
 apt-get install -y g++ \
                    libcapstone-dev \
                    cmake \
@@ -8,7 +8,7 @@ apt-get install -y g++ \
 cd /dockerstartup/install/navicat
 wget -q http://download.navicat.com.cn/download/navicat15-premium-cs.AppImage -O navicat15-premium-cs.AppImage
 
-git clone http://github.com/keystone-engine/keystone.git
+git clone https://github.com/keystone-engine/keystone.git
 cd keystone
 mkdir build
 cd build
