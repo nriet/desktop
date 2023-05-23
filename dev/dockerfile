@@ -43,23 +43,25 @@ RUN wget -q http://bt.nriet.xyz/down/nYT9ZCTSsHoY.gz -O /usr/share/fonts/myfonts
 # 	&& apt-get install -y nodejs
 
 # Install finalshell
-RUN wget www.hostbuf.com/downloads/finalshell_install_linux.sh \
-    && chmod +x finalshell_install_linux.sh \
-    && ./finalshell_install_linux.sh \
-    && chmod +x /usr/lib/FinalShell/bin/FinalShell \
-    && rm -rf finalshell_install_linux.sh \
-    && rm -rf finalshell_data_linux.zip
-    
+COPY ./src/ubuntu/install/finalshell $INST_SCRIPTS/finalshell/
+RUN bash $INST_SCRIPTS/finalshell/install_finalshell.sh 
 
+# RUN wget www.hostbuf.com/downloads/finalshell_install_linux.sh \
+#     && chmod +x finalshell_install_linux.sh \
+#     && ./finalshell_install_linux.sh \
+#     && chmod +x /usr/lib/FinalShell/bin/FinalShell \
+#     && rm -rf finalshell_install_linux.sh \
+#     && rm -rf finalshell_data_linux.zip
+    
 # Install anavicat 
 # COPY ./src/ubuntu/install/navicat $INST_SCRIPTS/navicat/
 # RUN bash $INST_SCRIPTS/navicat/install_vs_navicat.sh 
-RUN wget -q http://bt.nriet.xyz/down/8P7mhMF1RQHZ.gz -O /opt/Navicat15.tar.gz \
-    && cd /opt \
-    && tar zxvf Navicat15.tar.gz  \
-    && cp /opt/Navicat15/navicat.desktop /usr/share/applications/navicat.desktop \
-    && chmod -R +x /opt/Navicat15/* \
-    && rm -rf /opt/Navicat15.tar.gz
+# RUN wget -q http://bt.nriet.xyz/down/8P7mhMF1RQHZ.gz -O /opt/Navicat15.tar.gz \
+#     && cd /opt \
+#     && tar zxvf Navicat15.tar.gz  \
+#     && cp /opt/Navicat15/navicat.desktop /usr/share/applications/navicat.desktop \
+#     && chmod -R +x /opt/Navicat15/* \
+#     && rm -rf /opt/Navicat15.tar.gz
 
 
 ######### End Customizations ###########
