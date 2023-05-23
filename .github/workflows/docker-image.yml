@@ -33,7 +33,8 @@ jobs:  # workflow中的job
       - name: nriet/desktop
         uses: docker/build-push-action@v2 # docker build  & push
         with:
-          context: dockerfile-dev
+          context: .
+          docker-file: ./dockerfile-dev
           push: true
           tags: nriet/desktop-dev
           
