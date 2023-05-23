@@ -35,5 +35,5 @@ jobs:  # workflow中的job
         with:
           context: .
           push: true
-          tags: nriet/desktop-dev
+          tags: nriet/desktop:dev
           
