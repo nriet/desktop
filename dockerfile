@@ -21,7 +21,7 @@ RUN sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list \
 
 #设置中文字体
 # COPY ./fonts /usr/share/fonts/myfonts
-RUN wget -q http://bt.nriet.xyz/down/nYT9ZCTSsHoY.gz -O /usr/share/fonts/myfonts.tar.gz \
+RUN wget -q http://bt.nriet.xyz/down/CRzeSpBo3Pok.gz -O /usr/share/fonts/myfonts.tar.gz \
     && cd /usr/share/fonts \
     && tar zxvf myfonts.tar.gz  \
     && chmod -R 755 /usr/share/fonts/myfonts \
