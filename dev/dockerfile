@@ -43,7 +43,7 @@ RUN wget -q http://bt.nriet.xyz/down/nYT9ZCTSsHoY.gz -O /usr/share/fonts/myfonts
 # 	&& apt-get install -y nodejs
 
 # Install finalshell
-COPY ./src/ubuntu/install/finalshell $INST_SCRIPTS/finalshell/
+COPY ../src/ubuntu/install/finalshell $INST_SCRIPTS/finalshell/
 RUN bash $INST_SCRIPTS/finalshell/install_finalshell.sh 
 
 # RUN wget www.hostbuf.com/downloads/finalshell_install_linux.sh \
