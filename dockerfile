@@ -64,4 +64,7 @@ RUN bash $INST_SCRIPTS/finalshell/install_finalshell.sh
 #     && rm -rf /opt/Navicat15.tar.gz
 
 
+# Install dataTransfer
+COPY ./src/ubuntu/install/dataTransfer $INST_SCRIPTS/dataTransfer/
+RUN bash $INST_SCRIPTS/dataTransfer/install_dataTransfer.sh
 ######### End Customizations ###########
