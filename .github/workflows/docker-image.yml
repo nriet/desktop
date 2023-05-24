@@ -30,10 +30,10 @@ jobs:  # workflow中的job
         with:
           images: nriet/desktop
           
-      - name: nriet/desktop
+      - name: nriet/desktop:dataTransfer-7.8.1
         uses: docker/build-push-action@v2 # docker build  & push
         with:
-          context: .
+          dockerfile: dockerfile-dataTransfer
           push: true
-          tags: nriet/desktop:dev
+          tags: nriet/desktop:dataTransfer-7.8.1
           
