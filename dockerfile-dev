@@ -55,7 +55,7 @@ RUN bash $INST_SCRIPTS/finalshell/install_finalshell.sh
     
 # Install anavicat 
 COPY ./src/ubuntu/install/navicat $INST_SCRIPTS/navicat/
-RUN bash $INST_SCRIPTS/navicat/install_vs_navicat.sh 
+RUN bash $INST_SCRIPTS/navicat/install_navicat.sh 
 # RUN wget -q http://bt.nriet.xyz/down/hIZGn4yYWTFP.gz -O /opt/Navicat15.tar.gz \
 #     && cd /opt \
 #     && tar zxvf Navicat15.tar.gz  \

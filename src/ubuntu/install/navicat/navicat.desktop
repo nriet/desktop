@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Navicat Premium 15
+Comment=The Smarter Way to manage dadabase
+Exec=/opt/Navicat15/navicat15-premium-cs-pathed.AppImage
+Icon=/opt/Navicat15/navicat.png
+Categories=Application;Database;MySQL;navicat
+Version=1.0
+Type=Application
+Terminal=0
