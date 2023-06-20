@@ -40,7 +40,7 @@ jobs:  # workflow中的job
       - name: nriet/desktop:dev
         uses: docker/build-push-action@v2 # docker build  & push
         with:
-          file: dockerfile-dataTransfer
+          file: dockerfile-dev
           push: true
           tags: nriet/desktop:dev
           
