@@ -54,9 +54,9 @@ RUN bash $INST_SCRIPTS/finalshell/install_finalshell.sh
 #     && rm -rf finalshell_data_linux.zip
     
 # Install anavicat 
-# COPY ./src/ubuntu/install/navicat $INST_SCRIPTS/navicat/
-# RUN bash $INST_SCRIPTS/navicat/install_vs_navicat.sh 
-# RUN wget -q http://bt.nriet.xyz/down/8P7mhMF1RQHZ.gz -O /opt/Navicat15.tar.gz \
+COPY ./src/ubuntu/install/navicat $INST_SCRIPTS/navicat/
+RUN bash $INST_SCRIPTS/navicat/install_vs_navicat.sh 
+# RUN wget -q http://bt.nriet.xyz/down/hIZGn4yYWTFP.gz -O /opt/Navicat15.tar.gz \
 #     && cd /opt \
 #     && tar zxvf Navicat15.tar.gz  \
 #     && cp /opt/Navicat15/navicat.desktop /usr/share/applications/navicat.desktop \
@@ -65,6 +65,6 @@ RUN bash $INST_SCRIPTS/finalshell/install_finalshell.sh
 
 
 # Install dataTransfer
-COPY ./src/ubuntu/install/dataTransfer $INST_SCRIPTS/dataTransfer/
-RUN bash $INST_SCRIPTS/dataTransfer/install_dataTransfer.sh
+# COPY ./src/ubuntu/install/dataTransfer $INST_SCRIPTS/dataTransfer/
+# RUN bash $INST_SCRIPTS/dataTransfer/install_dataTransfer.sh
 ######### End Customizations ###########

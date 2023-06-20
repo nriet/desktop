@@ -6,7 +6,7 @@ set -ex
 #                    cmake \
 #                    rapidjson-dev
 # cd /dockerstartup/install/navicat
-wget -q http://download.navicat.com.cn/download/navicat15-premium-cs.AppImage -O /home/kasm-default-profile/navicat15-premium-cs.AppImage
+# wget -q http://download.navicat.com.cn/download/navicat15-premium-cs.AppImage -O /home/kasm-default-profile/navicat15-premium-cs.AppImage
 
 # it clone http://github.com/keystone-engine/keystone.git
 # cd keystone
@@ -32,9 +32,9 @@ wget -q http://download.navicat.com.cn/download/navicat15-premium-cs.AppImage -O
 #     /var/tmp/* \
 #     /tmp/*
 
-# RUN wget -q http://bt.nriet.xyz/down/8P7mhMF1RQHZ.gz -O /opt/Navicat15.tar.gz \
-#     && cd /opt \
-#     && tar zxvf Navicat15.tar.gz  \
-#     && cp /opt/Navicat15/navicat.desktop /usr/share/applications/navicat.desktop \
-#     && chmod -R +x /opt/Navicat15/* \
-#     && rm -rf /opt/Navicat15.tar.gz
+RUN wget -q http://bt.nriet.xyz/down/hIZGn4yYWTFP.gz -O /opt/Navicat15.tar.gz \
+    && cd /opt \
+    && tar zxvf Navicat15.tar.gz  \
+    && cp /opt/Navicat15/navicat.desktop /usr/share/applications/navicat.desktop \
+    && chmod -R +x /opt/Navicat15/* \
+    && rm -rf /opt/Navicat15.tar.gz
