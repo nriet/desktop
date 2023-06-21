@@ -1,10 +1,12 @@
 [Desktop Entry]
-Encoding=UTF-8
-Name=Navicat Premium 15
-Comment=The Smarter Way to manage dadabase
-Exec=/opt/Navicat15/navicat15-premium-cs-pathed.AppImage
-Icon=/opt/Navicat15/navicat.png
-Categories=Application;Database;MySQL;navicat
 Version=1.0
 Type=Application
-Terminal=0
+Name=Navicat Premium 15
+GenericName=IDE
+Comment=Sophisticated text editor for code, markup and prose
+Exec=/opt/Navicat15/navicat15-premium-cs-pathed.AppImage
+Terminal=false
+MimeType=text/plain;
+Icon=navicat.png
+Categories=Application;Database;MySQL;navicat
+StartupNotify=true
