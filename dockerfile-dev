@@ -68,3 +68,7 @@ RUN bash $INST_SCRIPTS/navicat/install_navicat.sh
 # COPY ./src/ubuntu/install/dataTransfer $INST_SCRIPTS/dataTransfer/
 # RUN bash $INST_SCRIPTS/dataTransfer/install_dataTransfer.sh
 ######### End Customizations ###########
+
+# Install anavicat 
+COPY ./src/ubuntu/install/eclipse $INST_SCRIPTS/eclipse/
+RUN bash $INST_SCRIPTS/eclipse/install_eclipse.sh
