@@ -72,3 +72,10 @@ RUN bash $INST_SCRIPTS/navicat/install_navicat.sh
 # Install anavicat 
 COPY ./src/ubuntu/install/eclipse $INST_SCRIPTS/eclipse/
 RUN bash $INST_SCRIPTS/eclipse/install_eclipse.sh
+
+
+RUN sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list \
+    && apt-get update \
+    && apt-get install -y rdesktop \
+    && apt-get clean \
+    && rm -rf /tmp/* /var/cache/* /usr/share/doc/* /usr/share/man/* /var/lib/apt/lists/*
