@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd /tmp
-wget -q -O dataTransfer.tar.gz "http://bt.nriet.xyz/down/HeEuh4gm4oWD.gz"
+wget -q -O dataTransfer.tar.gz "http://bt.nriet.xyz/down/HeEuh4gm4oWD.gz?fname=/DataTransfer_7.9.2_centos7_binary.tar.gz&down=true"
 mkdir /opt/dataTransfer
 tar -xzf dataTransfer.tar.gz -C /opt/dataTransfer
 rm -rf /tmp/*

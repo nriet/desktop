@@ -1,5 +1,5 @@
 FROM kasmweb/centos-7-desktop:1.14.0
-# USER root
+USER root
 
 # ENV HOME /root
 ENV STARTUPDIR /dockerstartup
@@ -34,4 +34,6 @@ ENV TIME_ZONE Asia/Shanghai
 # Install dataTransfer
 COPY ./src/ubuntu/install/dataTransfer $INST_SCRIPTS/dataTransfer/
 RUN bash $INST_SCRIPTS/dataTransfer/install_dataTransfer.sh
+
+USER kasm_user
 ######### End Customizations ###########
