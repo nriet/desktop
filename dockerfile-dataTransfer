@@ -1,5 +1,5 @@
-FROM accetto/xubuntu-vnc-novnc-chrome
-USER root
+FROM kasmweb/centos-7-desktop:1.14.0
+# USER root
 
 # ENV HOME /root
 ENV STARTUPDIR /dockerstartup
