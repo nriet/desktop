@@ -35,5 +35,5 @@ ENV TIME_ZONE Asia/Shanghai
 COPY ./src/ubuntu/install/dataTransfer $INST_SCRIPTS/dataTransfer/
 RUN bash $INST_SCRIPTS/dataTransfer/install_dataTransfer.sh
 
-USER kasm_user
+#USER kasm_user
 ######### End Customizations ###########
