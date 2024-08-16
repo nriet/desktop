@@ -33,7 +33,7 @@ jobs:  # workflow中的job
       - name: nriet/desktop:idea
         uses: docker/build-push-action@v2 # docker build  & push
         with:
-          file: dockerfile-idea
+          file: Dockerfile-idea
           push: true
           tags: nriet/idea:2023.3
           
