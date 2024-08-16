@@ -34,5 +34,5 @@ RUN echo "Asia/Shanghai" > /etc/timezone
 COPY ./src/ubuntu/install/idea $INST_SCRIPTS/idea/
 RUN bash $INST_SCRIPTS/idea/install_idea.sh
 
-USER kasm_user
+#USER kasm_user
 ######### End Customizations ###########
