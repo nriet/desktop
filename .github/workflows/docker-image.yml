@@ -1,3 +1,4 @@
+
 # docker-image.yml
 name: Publish Docker image   # workflow名称，可以在Github项目主页的【Actions】中看到所有的workflow
 
@@ -29,13 +30,19 @@ jobs:  # workflow中的job
         uses: docker/metadata-action@v3  # 抽取项目信息，主要是镜像的tag
         with:
           images: nriet/desktop
-          
-      - name: nriet/desktop:dataTransfer-7.9.2
+      - name: nriet/desktop:idea
         uses: docker/build-push-action@v2 # docker build  & push
         with:
-          file: dockerfile-dataTransfer
+          file: dockerfile-idea
           push: true
-          tags: nriet/desktop:dataTransfer-7.9.2
+          tags: nriet/idea:2023.3
+          
+      # - name: nriet/desktop:dataTransfer-7.9.2
+      #   uses: docker/build-push-action@v2 # docker build  & push
+      #   with:
+      #     file: dockerfile-dataTransfer
+      #     push: true
+      #     tags: nriet/desktop:dataTransfer-7.9.2
           
       # - name: nriet/desktop:dev
       #   uses: docker/build-push-action@v2 # docker build  & push
